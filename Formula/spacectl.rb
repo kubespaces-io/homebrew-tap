@@ -5,21 +5,21 @@
 class Spacectl < Formula
   desc "CLI for KubeSpaces — the open control plane for virtual Kubernetes tenants"
   homepage "https://kubespaces.io"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.0/spacectl_0.1.0_darwin_amd64.tar.gz"
-      sha256 "4cf61821a71c274e6258e1fe66233acbf08782a0c4ce95fbeae5dd9f648632c6"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.1/spacectl_0.1.1_darwin_amd64.tar.gz"
+      sha256 "6cd071f673b9090e5bad28ed63768de95bb736462d085c72fde5f938177801bc"
 
       define_method(:install) do
         bin.install "spacectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.0/spacectl_0.1.0_darwin_arm64.tar.gz"
-      sha256 "636981ede12fa2a399784fc2a1a198eddf562cbc183f1cedf96564ed2d68d993"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.1/spacectl_0.1.1_darwin_arm64.tar.gz"
+      sha256 "096b538038d9b8815fa9adefd8b3a8c5be91638de755995bbd39568d43e9c8e6"
 
       define_method(:install) do
         bin.install "spacectl"
@@ -29,15 +29,15 @@ class Spacectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.0/spacectl_0.1.0_linux_amd64.tar.gz"
-      sha256 "937fb71d199f52f8982cf843682974df11978472b1c0478f2aacfb41b2006486"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.1/spacectl_0.1.1_linux_amd64.tar.gz"
+      sha256 "a203dbe1682314cbdad66df880653f683b6a37f855462d588e73619ab5ee59ba"
       define_method(:install) do
         bin.install "spacectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.0/spacectl_0.1.0_linux_arm64.tar.gz"
-      sha256 "7e6109291b5187d7c81a7563cc29a48718ecf93433985ef022a4100b9debca00"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.1.1/spacectl_0.1.1_linux_arm64.tar.gz"
+      sha256 "282ddbbaa20003b7fddebe60914611067ef8df30d1ca21b28cd4cff4b2850ab7"
       define_method(:install) do
         bin.install "spacectl"
       end
