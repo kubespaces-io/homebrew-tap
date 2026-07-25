@@ -5,21 +5,21 @@
 class Kubespaces < Formula
   desc "CLI for KubeSpaces — the open control plane for virtual Kubernetes tenants"
   homepage "https://kubespaces.io"
-  version "0.9.3"
+  version "0.9.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.3/kubespaces_0.9.3_darwin_amd64.tar.gz"
-      sha256 "5e80315300ee048c6530c909ee27517712bf2548a965aaf9a66c88d3fd85438b"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.4/kubespaces_0.9.4_darwin_amd64.tar.gz"
+      sha256 "77ecf9a640f978fd55690ac2792415c0ae4ede7c31e39736ab506fb15633e91c"
 
       define_method(:install) do
         bin.install "kubespaces"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.3/kubespaces_0.9.3_darwin_arm64.tar.gz"
-      sha256 "610ce11497f25497773a431563ac9a080b7497964ed9a89cf8018d1d194aa682"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.4/kubespaces_0.9.4_darwin_arm64.tar.gz"
+      sha256 "cf53850b0d360efd8128dfbb544a44ef957a79a193b04d94ed0e839c6fc6a47f"
 
       define_method(:install) do
         bin.install "kubespaces"
@@ -29,15 +29,15 @@ class Kubespaces < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.3/kubespaces_0.9.3_linux_amd64.tar.gz"
-      sha256 "7d85e6a7fd32d2e8b51df1927331589b4b2af2ff66edcd632317977f0e4f7cfa"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.4/kubespaces_0.9.4_linux_amd64.tar.gz"
+      sha256 "cc6969a70bb4b5977b96c697bc9c25c4dba30b568d7d8e2f2cf18ae3a19486ac"
       define_method(:install) do
         bin.install "kubespaces"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.3/kubespaces_0.9.3_linux_arm64.tar.gz"
-      sha256 "b55580180cd4e804e0ebeeafc429264baef4e80c90028e2c5d9f81584f710ff6"
+      url "https://github.com/kubespaces-io/kubespaces/releases/download/v0.9.4/kubespaces_0.9.4_linux_arm64.tar.gz"
+      sha256 "7201bbbd47d3d1fcdf3ad152b6a5f07a8085c4763c8aa61e583c99f43faca012"
       define_method(:install) do
         bin.install "kubespaces"
       end
